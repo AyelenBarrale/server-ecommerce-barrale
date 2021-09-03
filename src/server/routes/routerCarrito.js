@@ -12,7 +12,7 @@ const {
 routerCart.get("/api/carrito/:id/productos", getProdsCart);
 routerCart.post("/api/carrito", postCart);
 routerCart.delete("/api/carrito/:id", deleteCartById);
-routerCart.post("api/carrito/:id/productos", postProdinCart);
+routerCart.post("api/carrito/productos", postProdinCart);
 //routerCart.delete("api/carrito/:id/productos/:id_prod", deleteProdInCart);
 
 module.exports = routerCart;

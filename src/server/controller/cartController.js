@@ -1,5 +1,3 @@
-const { contProductos } = require("../controller/prodController");
-
 //Clase contenedora
 const Contenedor = require("../services/contenedor");
 let contCarrito = new Contenedor("./src/server/database/carrito.json");
@@ -20,9 +18,9 @@ const deleteCartById = async (req, res) => {
     params: { id },
   } = req;
 
-  await contCarrito.deleteById(id);
+  const carritoEliminado = await contCarrito.deleteById(id);
   try {
-    res.status(200).send("Carrito Eliminado");
+    res.status(200).send(carritoEliminado);
   } catch (error) {
     res.status(400).send(error);
   }
@@ -30,16 +28,24 @@ const deleteCartById = async (req, res) => {
 
 ////////duda/////////
 const postProdinCart = async (req, res) => {
-  const {
-    params: { id },
-  } = req;
-  const producto = await contProductos.getById(id);
-  if (producto) {
-    await contCarrito.saveNuevoProd(producto);
-  }
+  const { nombre, codigo, descripcion, precio, foto, stock, id, timestamp } =
+    req.body;
+
+  const newProd = {
+    nombre: nombre,
+    codigo: codigo,
+    descripcion: descripcion,
+    precio: precio,
+    foto: foto,
+    stock: stock,
+    id: id,
+    timestamp: timestamp,
+  };
+
+  const cart = await contCarrito.saveNuevoProd(newProd);
 
   try {
-    res.status(200).send(producto);
+    res.status(200).send(cart);
   } catch (error) {
     res.status(400).send(error);
   }
