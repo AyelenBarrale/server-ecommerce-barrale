@@ -26,7 +26,7 @@ const deleteCartById = async (req, res) => {
   }
 };
 
-////////duda/////////
+////////NO FUNCIONA/////////
 const postProdinCart = async (req, res) => {
   const { nombre, codigo, descripcion, precio, foto, stock, id, timestamp } =
     req.body;
@@ -50,6 +50,7 @@ const postProdinCart = async (req, res) => {
     res.status(400).send(error);
   }
 };
+//////////////////////////////
 
 const getProdsCart = async (req, res) => {
   const carrito = await contCarrito.getAll();
@@ -64,7 +65,7 @@ const getProdsCart = async (req, res) => {
   }
 };
 
-////////duda/////////
+////////NO FUNCIONA/////////
 /* const deleteProdInCart = async (req, res) => {
   const {
     params: { id, id_prod },
