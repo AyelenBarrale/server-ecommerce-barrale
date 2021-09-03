@@ -1,0 +1,32 @@
+[
+    {
+        "nombre":"iphone 11",
+        "codigo":"I11",
+        "descripcion":"capacidad 128gb",
+        "precio":"173000",
+        "foto":"https://i.blogs.es/187a45/iphone-11-pro-02/450_1000.jpg",
+        "stock":"90",
+        "id":"44fbc246-8e26-4ea9-8501-836753962d82",
+        "timestamp":"2021-09-02T13:04:02.577Z"
+    },
+    {
+        "nombre":"macbook air 2018",
+        "codigo":"MACAIR18",
+        "descripcion":"intel A5, 13 pulgadas",
+        "precio":"200000",
+        "foto":"https://www.ventasrosario.com.ar/wp-content/uploads/2021/01/AUaDk6VmkFriSBiQJHrx4V.jpg",
+        "stock":"84",
+        "id":"938f2db0-f1be-45fe-987a-d730f4c1b8d7",
+        "timestamp":"2021-09-02T13:04:38.622Z"
+    },
+    {
+        "nombre":"teclado mecánico k12",
+        "codigo":"TECK12",
+        "descripcion":"Teclado mecánico switch red 60%",
+        "precio":"20000",
+        "foto":"https://www.eloquentclicks.com/wp-content/uploads/2021/07/dual.jpg",
+        "stock":"56",
+        "id":"2dc8bee3-433f-4cc7-91ec-16e4b2b00c06",
+        "timestamp":"2021-09-02T13:05:53.703Z"
+    }
+]
